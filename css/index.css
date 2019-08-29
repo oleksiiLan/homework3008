@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab|Livvic&display=swap');
+
+:root {
+    --accent-color: #348feb;
+    --font-color: black;
+    font-family: 'Livvic', sans-serif;/*щрифт по замовчуванню*/
+    scroll-behavior: smooth;
+}
+
+body{/*сторінка завжди по центру*/
+    max-width: 980px;
+    margin: auto;
+}
+
+header nav .logo{
+    font-family: 'Hepta Slab', serif;
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    color:var(--accent-color);
+}
+header nav .menu{
+    display: flex;
+    padding: 5px;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+header nav .menu li a {
+    text-decoration: none;
+    color:var(--font-color);
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 2px;
+}
+
+header nav .menu li a:hover{
+    border: 1px solid var(--accent-color);
+}
+@media (min-width: 600px){/*адаптуе екран*/
+    header nav {
+        display:flex;
+        align-items: center;
+    }
+    header nav .menu{
+        flex: 1;
+    }
+}
+
+header .banner {/*кнопкт на банер и назва*/
+    background-image: url(../img/360.jpg);
+    background-position: center;
+    background-size: cover;
+    height:500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .banner h1{/*назву на банер*/
+    font-family: 'Hepta Slab', serif;
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    color:var(--font-color);
+}
+
+main .product img{
+    width:100%;
+    display: block;
+}
+
+main .product .product-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 600px){
+    main .product-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+}
+
+@media (min-width: 900px){
+    main .product-list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 980px){
+    main .product-list{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+button. {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ed3330;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+button:hover {
+    background: #9cb9f8;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
